@@ -1,8 +1,11 @@
+@import url('./content.css');
+
 :root {
 	--darkgray: #212329;
 	--brightred: #f9423d;
 	--white: #fff;
 	--lightred: #f9433dcc;
+	--lightblue:#337AF1;
 }
 * {
 	box-sizing: border-box;
@@ -74,12 +77,12 @@
 	}
 	.nav-menu {
 		display: grid;
-		grid-template-columns: auto;
-		background: var(--brightred);
-		transition: all 0.5 ease-in-out;
-		margin: 0;
-		width: 100%;
 		position: absolute;
+		grid-template-columns: auto;
+		transition: all 0.5s ease;
+		background: var(--brightred);
+		margin: 0;
+		width: 100vw;
 		top: 80px;
 		left: -100%;
 		opacity: 0;
@@ -90,6 +93,7 @@
 	.nav-menu.active {
 		background: var(--darkgray);
 		left: 0;
+		width: 100vw;
 		transition: all 0.5s ease-in-out;
 		opacity: 1;
 	}
